@@ -178,3 +178,54 @@ textarea::placeholder {
 .blog-post button:hover {
   background-color: #f4a226;
 }
+
+
+
+
+
+
+
+.blog-posts {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.blog-post h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.blog-post p {
+  margin-bottom: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.blog-post button {
+  background-color: #ffcc66;
+  border: none;
+  border-radius: 4px;
+  color: #333333;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+  background-color: #ffa366;
+}
