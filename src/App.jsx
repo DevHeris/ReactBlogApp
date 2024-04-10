@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import Logo from "./components/Logo";
+import Form from "./components/Form";
 
 const blogPosts = [
   {
@@ -25,47 +26,17 @@ const blogPosts = [
 ];
 
 function App() {
-  const [filterAuthor, setFilterAuthor] = useState("");
-
-  const uniqueAuthors = Array.from(new Set(blogPosts.map((post) => post.author)));
-
-  const handleFilterChange = (e) => {
-    setFilterAuthor(e.target.value);
-  };
-
   return (
     <div className="app">
-      <header className="header">
-        <h1>📝 My Blog</h1>
-        <select value={filterAuthor} onChange={handleFilterChange}>
-          <option value="">Filter by Author</option>
-          {uniqueAuthors.map((author) => (
-            <option value={author} key={author}>
-              {author}
-            </option>
-          ))}
-        </select>
-      </header>
+      <Logo />
+      <Form />
       <div className="blog-posts">
-        {blogPosts
-          .filter((post) => !filterAuthor || post.author === filterAuthor)
-          .map((post) => (
-            <div className="blog-post" key={post.id}>
-              <h2>{post.title}</h2>
-              <p>{post.content}</p>
-              <p>Author: {post.author}</p>
-              <button>Delete Post ❌</button>
-            </div>
-          ))}
-      </div>
-      <div className="add-post-form">
-        <h2>Add New Post</h2>
-        <form>
-          <input type="text" placeholder="Title" />
-          <textarea placeholder="Content" rows="4" />
-          <input type="text" placeholder="Author" />
-          <button>Add Post ➕</button>
-        </form>
+        <div className="blog-post">
+          <h2>Post title</h2>
+          <p>Post content</p>
+          <p>Author</p>
+          <button>Delete Post ❌</button>
+        </div>
       </div>
     </div>
   );
