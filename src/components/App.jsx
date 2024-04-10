@@ -1,8 +1,9 @@
-import Logo from "./components/Logo";
-import Form from "./components/Form";
-import FilterAndActions from "./components/FilterAndActions";
+import Logo from "./Logo";
+import Form from "./Form";
+import FilterAndActions from "./FilterAndActions";
+import BlogPosts from "./BlogPosts";
 
-const blogPosts = [
+const posts = [
   {
     id: 1,
     title: "Introduction to React",
@@ -33,14 +34,7 @@ function App() {
       <div className="form-filter">
         <Form />
         <FilterAndActions />
-      </div>
-      <div className="blog-posts">
-        <div className="blog-post">
-          <h2>Post title</h2>
-          <p>Post content</p>
-          <p>Author</p>
-          <button>Delete Post ❌</button>
-        </div>
+        <BlogPosts />
       </div>
     </div>
   );

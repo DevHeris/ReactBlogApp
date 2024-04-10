@@ -25,55 +25,19 @@ h1 {
   word-spacing: 30%;
 }
 
-.blog-posts {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 1rem;
-}
-
-.blog-post {
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-}
-
-.blog-post h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.blog-post p {
-  margin-bottom: 1rem;
-}
-
-.blog-post button {
-  background-color: #ffebb3;
-  border-radius: 0.3rem;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.blog-post button:hover {
-  background-color: #f4a226;
-}
-
-.add-post-form {
+.add-post-wrapper {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #5a3e2b;
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 1em 0 0 1em;
   max-width: 33em;
   padding: 2rem;
   grid-row: 1/3;
 }
 
-.add-post-form h2 {
+.add-post-wrapper h2 {
   color: #e5771f;
   font-size: 2.3rem;
   font-weight: bold;
@@ -108,7 +72,7 @@ h1 {
   margin-bottom: 1em;
 }
 
-.add-post-form form > div {
+.add-post-wrapper form > div {
   display: flex;
   justify-content: flex-end;
 }
@@ -145,7 +109,7 @@ textarea:focus {
   outline: 1px solid #5a3e2b;
 }
 
-.add-post-form label {
+.add-post-wrapper label {
   display: block;
   font-weight: 800;
 }
@@ -167,11 +131,50 @@ textarea::placeholder {
   align-items: center;
   justify-content: space-between;
   background-color: #5a3e2b;
-  margin: 1em 0;
+  margin: 1em 0 0em 0;
   color: white;
   padding: 0.5em 2em;
 }
 
 .filter-actions .btn {
   padding: 0.8rem 2.4rem;
+}
+
+.blog-posts {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 1rem;
+  background-color: #e5771f;
+}
+
+.blog-post {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.blog-post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+  margin-bottom: 1rem;
+}
+
+.blog-post button {
+  background-color: #ffebb3;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+  background-color: #f4a226;
 }

@@ -1,6 +1,6 @@
 export default function Form() {
   return (
-    <div className="add-post-form">
+    <div className="add-post-wrapper">
       <h2>New Post</h2>
       <form>
         <label htmlFor="title">Title</label>
