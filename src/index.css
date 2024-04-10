@@ -1,40 +1,77 @@
-/* BlogPostList.css */
+/* AddPostForm.css */
+.add-post-form {
+  background-color: #e5771f;
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.add-post-form h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ffebb3;
+  margin-bottom: 1rem;
+}
+
+.add-post-form input[type="text"],
+.add-post-form textarea {
+  background-color: #ffebb3;
+  color: #5a3e2b;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.add-post-form button {
+  background-color: #76c7ad;
+  color: #5a3e2b;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+} /* BlogPost.css */
+.blog-post {
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post h3 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.blog-post p {
+  font-size: 1.8rem;
+  text-align: center;
+} /* BlogPostList.css */
 .blog-post-list {
   margin: 20px auto;
   max-width: 600px;
 }
 
 .blog-post-list h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  text-align: center;
+  background-color: #f4a226;
+  font-family: "Monoton";
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
 }
 
 .blog-post-list ul {
   list-style: none;
   padding: 0;
-}
-
-.blog-post {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.blog-post h3 {
-  margin-top: 0;
-}
-
-.blog-post p {
-  margin-bottom: 5px;
-}
-
-.add-post-form {
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.add-post-form h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
 }
