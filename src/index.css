@@ -1,26 +1,48 @@
 :root {
-  --color-lightest: #fff4e6;
-  --color-light: #ffe8cc;
-  --color-medium: #ffa94d;
-  --color-dark: #ff922b;
-  --color-brown: #5a3e2b; /* New brown color */
+  --color-background: #f8f9fa; /* Light gray background */
+  --color-text: #495057; /* Dark text color */
+  --color-accent: #343a40; /* Accent color */
+  --color-primary: #007bff; /* Primary color */
+  --color-secondary: #6c757d; /* Secondary color */
 }
 
-/* BlogPostList.css */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* Blog Post List Styles */
 .blog-post-list {
-  margin: 20px auto;
-  max-width: 900px;
+  margin: 20px 0;
 }
 
 .blog-post-list h2 {
   text-align: center;
-  background-color: var(--color-medium);
-  color: #343a40;
-  padding: 1.5rem;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 10px; /* Add border-radius */
+  color: var(--color-accent);
+  padding: 20px 0;
+  font-size: 2rem;
 }
 
 .blog-post-list ul {
@@ -28,19 +50,19 @@
   padding: 0;
 }
 
-/* BlogPost.css */
+/* Blog Post Styles */
 .blog-post {
-  background-color: var(--color-lightest);
-  color: #495057;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
 }
 
 .blog-post p {
@@ -50,59 +72,74 @@
 
 .blog-post .author {
   font-style: italic;
+  color: var(--color-secondary);
 }
 
-/* AddPostForm.css */
+/* Add Post Form Styles */
 .add-post-form {
-  background-color: var(--color-lightest);
-  color: #495057;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .add-post-form h2 {
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.add-post-form form {
-  display: grid;
-  gap: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
 }
 
 .add-post-form label {
   font-size: 1.6rem;
+  margin-bottom: 8px;
 }
 
 .add-post-form input[type="text"],
 .add-post-form textarea {
   font-family: inherit;
   font-size: 1.6rem;
-  padding: 1rem;
-  border: 1px solid var(--color-light);
-  border-radius: 6px;
-  transition: border-color 0.3s;
-}
-
-.add-post-form input[type="text"]:focus,
-.add-post-form textarea:focus {
-  outline: none;
-  border-color: var(--color-dark);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .add-post-form button {
-  background-color: var(--color-medium);
-  color: #343a40;
-  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 10px 20px;
   border: none;
-  border-radius: 7px;
-  font-weight: bold;
+  border-radius: 4px;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .add-post-form button:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-secondary);
+}
+
+/* Additional Styles */
+.container p {
+  line-height: 1.8;
+}
+
+.container a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 8px;
 }
