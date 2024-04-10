@@ -1,0 +1,40 @@
+/* BlogPostList.css */
+.blog-post-list {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.blog-post-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-post-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-post {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-post h3 {
+  margin-top: 0;
+}
+
+.blog-post p {
+  margin-bottom: 5px;
+}
+
+.add-post-form {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.add-post-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
