@@ -3,6 +3,7 @@
   --color-light: #ffe8cc;
   --color-medium: #ffa94d;
   --color-dark: #ff922b;
+  --color-brown: #5a3e2b; /* New brown color */
 }
 
 /* BlogPostList.css */
@@ -19,6 +20,7 @@
   font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: bold;
+  border-radius: 10px; /* Add border-radius */
 }
 
 .blog-post-list ul {
