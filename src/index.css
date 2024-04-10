@@ -1,77 +1,99 @@
-/* AddPostForm.css */
-.add-post-form {
-  background-color: #e5771f;
-  padding: 2.8rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-.add-post-form h2 {
-  text-align: center;
-  font-size: 2.4rem;
-  color: #ffebb3;
-  margin-bottom: 1rem;
-}
-
-.add-post-form input[type="text"],
-.add-post-form textarea {
-  background-color: #ffebb3;
-  color: #5a3e2b;
-  font-family: inherit;
-  border: none;
-  border-radius: 10rem;
-  padding: 1.2rem 3.2rem;
-  font-weight: 700;
-  font-size: 1.8rem;
-}
-
-.add-post-form button {
-  background-color: #76c7ad;
-  color: #5a3e2b;
-  font-family: inherit;
-  border: none;
-  border-radius: 10rem;
-  padding: 1.2rem 3.2rem;
-  font-weight: 700;
-  font-size: 1.8rem;
-  cursor: pointer;
-} /* BlogPost.css */
-.blog-post {
-  background-color: #5a3e2b;
-  color: #ffebb3;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.blog-post h3 {
-  font-size: 2.4rem;
-  text-align: center;
-}
-
-.blog-post p {
-  font-size: 1.8rem;
-  text-align: center;
-} /* BlogPostList.css */
+/* BlogPostList.css */
 .blog-post-list {
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 .blog-post-list h2 {
   text-align: center;
-  background-color: #f4a226;
-  font-family: "Monoton";
-  font-size: 8rem;
+  background-color: var(--color-medium);
+  color: #343a40;
+  padding: 1.5rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
-  font-weight: 400;
-  word-spacing: 30px;
-  letter-spacing: -5px;
-  padding: 2.4rem 0;
+  font-weight: bold;
 }
 
 .blog-post-list ul {
   list-style: none;
   padding: 0;
+}
+
+/* BlogPost.css */
+.blog-post {
+  background-color: var(--color-lightest);
+  color: #495057;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.blog-post .author {
+  font-style: italic;
+}
+
+/* AddPostForm.css */
+.add-post-form {
+  background-color: var(--color-lightest);
+  color: #495057;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-post-form h2 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.add-post-form form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.add-post-form label {
+  font-size: 1.6rem;
+}
+
+.add-post-form input[type="text"],
+.add-post-form textarea {
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: 1px solid var(--color-light);
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.add-post-form input[type="text"]:focus,
+.add-post-form textarea:focus {
+  outline: none;
+  border-color: var(--color-dark);
+}
+
+.add-post-form button {
+  background-color: var(--color-medium);
+  color: #343a40;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-post-form button:hover {
+  background-color: var(--color-dark);
 }
