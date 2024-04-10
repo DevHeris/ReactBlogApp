@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 * {
   margin: 0;
@@ -11,133 +11,107 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
-  color: #5a3e2b;
-  background-color: #ffe8cc;
+  font-family: "Roboto Mono", sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  border-bottom: 1.6rem solid #edc84b;
   min-height: 100vh;
   padding: 3.2rem;
+  padding-bottom: 6rem;
 }
 
 .container {
   max-width: 80rem;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4.8rem;
 }
 
 .header {
-  background-color: #f4a226;
-  text-align: center;
-  padding: 2.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 .header h1 {
-  font-family: "Monoton", cursive;
-  font-size: 8rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  word-spacing: 30px;
-  letter-spacing: -5px;
-  margin-bottom: 2.4rem;
+  font-size: 3.2rem;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
+.header input[type="text"] {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
 }
 
-.menu h2 {
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 500;
-}
-
-.menu > p {
-  font-size: 1.5rem;
-  text-align: center;
-  line-height: 1.6;
-  width: 80%;
+.blog-post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .blog-post {
-  background-color: #ffebb3;
-  padding: 2.4rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.blog-post h3 {
-  font-size: 2rem;
-  font-weight: 400;
+.blog-post h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
 .blog-post p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.blog-post button {
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+  background-color: #ff7875;
 }
 
 .add-post-form {
-  background-color: #ffebb3;
-  padding: 2.4rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .add-post-form h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
-.add-post-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.add-post-form form input,
+.add-post-form form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 
-.add-post-form input,
-.add-post-form textarea {
-  font-size: 1.6rem;
-  padding: 1.2rem;
+.add-post-form form button {
+  background-color: #52c41a;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  background-color: #ffebb3;
-}
-
-.add-post-form input:focus,
-.add-post-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(244, 162, 38, 0.4);
-}
-
-.add-post-form button {
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 1.2rem 2.4rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #76c7ad;
-  color: #343a40;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.add-post-form button:hover {
-  background-color: #ff922b;
-}
-
-.footer {
-  background-color: #ff922b;
-  text-align: center;
-  padding: 2.4rem 0;
-}
-
-.footer p {
-  font-size: 1.4rem;
+.add-post-form form button:hover {
+  background-color: #73d13d;
 }
