@@ -1,3 +1,10 @@
+:root {
+  --color-lightest: #fff4e6;
+  --color-light: #ffe8cc;
+  --color-medium: #ffa94d;
+  --color-dark: #ff922b;
+}
+
 /* BlogPostList.css */
 .blog-post-list {
   margin: 20px auto;
