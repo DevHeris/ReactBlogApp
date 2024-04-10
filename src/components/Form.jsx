@@ -10,7 +10,7 @@ export default function Form() {
         <label htmlFor="content">Content</label>
         <textarea className="content" placeholder="Enter content..." rows="7" />
         <div>
-          <button>Add Post</button>
+          <button className="btn">Add Post</button>
         </div>
       </form>
     </div>
