@@ -1,14 +1,13 @@
+import React from "react";
 
 function App() {
   return (
-    
+    <>
+      <BlogPostList />
+      <AddPostForm />
+    </>
   );
 }
-
-export default App;
-// BlogPostList.jsx
-import React from "react";
-import "./BlogPostList.css"; // Import CSS file for styling
 
 function BlogPostList() {
   return (
@@ -16,19 +15,24 @@ function BlogPostList() {
       <h2>Blog Posts</h2>
       <ul>
         <li>
-          <BlogPost title="Post Title 1" content="Lorem ipsum dolor sit amet." author="John Doe" />
+          <BlogPost
+            title="Post Title 1"
+            content="Lorem ipsum dolor sit amet."
+            author="John Doe"
+          />
         </li>
         <li>
-          <BlogPost title="Post Title 2" content="Consectetur adipiscing elit." author="Jane Smith" />
+          <BlogPost
+            title="Post Title 2"
+            content="Consectetur adipiscing elit."
+            author="Jane Smith"
+          />
         </li>
         {/* Add more BlogPost items as needed */}
       </ul>
     </div>
   );
 }
-
-export default BlogPostList;// BlogPost.jsx
-import React from "react";
 
 function BlogPost({ title, content, author }) {
   return (
@@ -39,9 +43,6 @@ function BlogPost({ title, content, author }) {
     </div>
   );
 }
-
-export default BlogPost;AddPostForm.jsx// AddPostForm.jsx
-import React from "react";
 
 function AddPostForm() {
   return (
@@ -57,4 +58,4 @@ function AddPostForm() {
   );
 }
 
-export default AddPostForm;
+export default App;
