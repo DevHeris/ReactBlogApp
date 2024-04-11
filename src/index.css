@@ -25,12 +25,13 @@ body {
 h1 {
   background-color: #f4a226;
   font-family: "Monoton";
-  font-size: 5rem;
+  font-size: clamp(2.2em, 5vw, 5em);
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   word-spacing: 0.2em;
+  padding: 0.3em 0.1em;
 }
 
 ul {
@@ -135,7 +136,7 @@ textarea::placeholder {
   font-size: 0.8rem;
 }
 
-.form-filter {
+.form-filter-posts {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 0.1fr 1fr;
@@ -243,4 +244,48 @@ textarea::placeholder {
   text-align: right;
   font-weight: 800;
   margin: 0.5em 0;
+}
+
+@media screen and (max-width: 800px) {
+  .form-filter-posts {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+  }
+
+  .filter-actions {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-right: 0;
+    padding: 0.5em 0;
+    border-radius: 0;
+    padding: 0.5em;
+  }
+
+  .blog-posts {
+    grid-column: 1/2;
+    grid-row: auto;
+    margin-right: 0;
+    border-radius: 0;
+    padding: 0;
+    /* overflow-y: auto; */
+    /* max-height: min-content; */
+  }
+
+  .blog-post {
+    border-radius: 0;
+  }
+
+  .add-post-wrapper {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .filter-actions .btn {
+    padding: 0.8em;
+    margin: 0.3em;
+  }
+
+  select {
+    max-width: 9em;
+  }
 }

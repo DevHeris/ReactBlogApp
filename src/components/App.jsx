@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <Logo />
-      <div className="form-filter">
+      <div className="form-filter-posts">
         {showForm && (
           <Form setShowForm={setShowForm} onAddNewPost={handleAddNewPost} />
         )}
