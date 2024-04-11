@@ -49,7 +49,7 @@ export default function Form({ setShowForm, onAddNewPost }) {
 
         <input
           type="text"
-          className="title"
+          className="title-input"
           placeholder="Enter title..."
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -62,7 +62,7 @@ export default function Form({ setShowForm, onAddNewPost }) {
         </label>
         <input
           type="text"
-          className="author"
+          className="author-input"
           placeholder="Enter author..."
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
@@ -74,7 +74,7 @@ export default function Form({ setShowForm, onAddNewPost }) {
           Content
         </label>
         <textarea
-          className="content"
+          className="content-input"
           placeholder="Enter content..."
           rows="7"
           value={content}
