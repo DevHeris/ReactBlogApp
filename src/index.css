@@ -39,19 +39,19 @@ ul {
 
 .add-post-wrapper {
   background-color: whitesmoke;
-  color: #5a3e2b;
+  color: #e5771f;
   display: flex;
   flex-direction: column;
   margin: 1em 0 1em 1em;
   max-width: 100%;
   padding: 2rem;
   grid-row: 1/3;
-  height: 90%;
+  height: fit-content;
   border-radius: 0.5em;
 }
 
 .add-post-wrapper h2 {
-  color: #e5771f;
+  color: #5a3e2b;
   font-size: 2.3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -150,7 +150,7 @@ textarea::placeholder {
   align-items: center;
   justify-content: space-between;
   background-color: #5a3e2b;
-  margin: 1em 0 0em 0;
+  margin: 1em 1em 0em 0;
   color: white;
   padding: 0.5em 2em;
   border-radius: 0.5em;
@@ -161,29 +161,36 @@ textarea::placeholder {
   margin: 0 1em;
 }
 
+.filter-actions .clear-all {
+  padding: 0.8rem 1em;
+}
+
 .blog-posts {
   grid-column: 2/3;
   grid-row: 2/3;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 1rem;
-  background-color: #e5771f;
+  padding: 2rem;
+  background-color: #f4a226;
   border-radius: 0.5em;
+  margin-right: 1em;
+  overflow-y: scroll;
+  max-height: 72vh;
 }
 
 .blog-post {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 2em;
   transition: transform 0.3s ease;
   cursor: pointer;
-  height: auto;
+  height: fit-content;
+  margin: 1em 0;
+}
+
+.blog-post > div {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .blog-post:hover {
@@ -212,6 +219,8 @@ textarea::placeholder {
   cursor: pointer;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
+  max-width: 7em;
+  display: flex;
 }
 
 .blog-post button:hover {

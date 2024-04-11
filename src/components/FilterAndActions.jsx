@@ -30,7 +30,7 @@ export default function FilterAndActions({
         <button className="btn" onClick={handleShowForm}>
           NEW
         </button>
-        <button className="btn" onClick={onClearAll}>
+        <button className="btn clear-all" onClick={onClearAll}>
           CLEAR All
         </button>
       </div>

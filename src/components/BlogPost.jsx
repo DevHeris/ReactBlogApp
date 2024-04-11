@@ -6,9 +6,11 @@ export default function BlogPost({ id, title, author, content, onDeletePost }) {
       <p>
         <strong>{author}</strong>
       </p>
-      <button className="btn">
-        <span onClick={() => onDeletePost(id)}>Delete</span>
-      </button>
+      <div>
+        <button onClick={() => onDeletePost(id)} className="btn">
+          Delete
+        </button>
+      </div>
     </li>
   );
 }
