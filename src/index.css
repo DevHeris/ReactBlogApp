@@ -280,7 +280,7 @@ textarea::placeholder {
 @media screen and (max-width: 800px) {
   .form-filter-posts {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   .filter-actions {

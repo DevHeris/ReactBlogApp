@@ -10,15 +10,15 @@ This project serves as a practice exercise for reinforcing my React fundamentals
 
 ## Features
 
-- **View Blog Posts:** Users can browse through a list of blog posts, each displaying a title, content, and author information. Clicking on a post reveals its full details.
-- **Add New Posts:** Adding new blog posts is intuitive with a form provided for users to input their content and contribute to the platform.
+- **View Blog Posts:** Users can browse through a list of blog posts, each displaying a title, content, and author information.
+- **Add New Posts:** Adding new blog posts is intuitive with a form provided for users to input their content.
 - **Delete Posts:** For content management, users can delete individual blog posts they have created, providing them with control over their contributions.
 
 ## Enhancements
 
-### Filter Functionality
+### Sort Functionality
 
-I've implemented a filter feature that allows users to filter blog posts based on specific criteria, such as author or category. This improves content discoverability and user engagement by enabling users to find relevant posts more efficiently.
+I've implemented a sort feature that allows users to sort blog posts based on specific criteria, such as author,title or input.
 
 ### Clear All Button
 
@@ -26,7 +26,6 @@ I've added a "Clear All" button, providing users with a convenient way to delete
 
 ## Implementation Details
 
-- **Filter Functionality:** Implemented using a `FilterComponent`, which renders a select input for choosing filter criteria.
 - **Clear All Button:** Implemented as a `ClearAllButton` component, triggering the deletion of all blog posts when clicked.
 
 ## Usage
