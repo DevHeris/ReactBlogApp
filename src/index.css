@@ -267,6 +267,7 @@ textarea::placeholder {
     margin-right: 0;
     border-radius: 0;
     padding: 0;
+    min-height: fit-content;
   }
 
   .blog-post {
@@ -289,5 +290,11 @@ textarea::placeholder {
 
   select {
     max-width: 9em;
+  }
+
+  .add-post-wrapper {
+    margin: 0;
+    border-radius: 0;
+    padding: 0.8em;
   }
 }
