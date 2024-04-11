@@ -1,15 +1,39 @@
-export default function FilterAndActions() {
+import { useState } from "react";
+
+export default function FilterAndActions({
+  posts,
+  setShowForm,
+  onClearAll,
+  sortBy,
+  setSortBy,
+}) {
+  const handleShowForm = () => {
+    setShowForm(true);
+  };
+
   return (
     <div className="filter-actions">
       <div>
         <label htmlFor="sort"></label>
-        <select name="sort" id="sort">
+        <select
+          name="sort"
+          id="sort"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
           <option value="input">Sort by input</option>
-          <option value="input">Sort by title</option>
-          <option value="input">Sort by author</option>
+          <option value="title">Sort by title</option>
+          <option value="author">Sort by author</option>
         </select>
       </div>
-      <button className="btn">NEW</button>
+      <div>
+        <button className="btn" onClick={handleShowForm}>
+          NEW
+        </button>
+        <button className="btn" onClick={onClearAll}>
+          CLEAR All
+        </button>
+      </div>
     </div>
   );
 }

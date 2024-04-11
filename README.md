@@ -6,7 +6,7 @@ A lightweight blog application built with React!
 
 ReactBlogApp is a platform for users to read and create blog posts, facilitating communication and knowledge sharing within the community. It provides a simple yet functional experience, allowing users to view blog posts, add new posts, and manage their content efficiently.
 
-This project serves as a practice exercise for reinforcing my React fundamentals before moving on with the course.
+This project serves as a practice exercise for reinforcing my React fundamentals before moving on with the intermediate part of the course.
 
 ## Features
 
@@ -17,9 +17,11 @@ This project serves as a practice exercise for reinforcing my React fundamentals
 ## Enhancements
 
 ### Filter Functionality
+
 I've implemented a filter feature that allows users to filter blog posts based on specific criteria, such as author or category. This improves content discoverability and user engagement by enabling users to find relevant posts more efficiently.
 
 ### Clear All Button
+
 I've added a "Clear All" button, providing users with a convenient way to delete all blog posts at once. This streamlines content management and improves usability, especially for users looking to start fresh or clean up their content.
 
 ## Implementation Details

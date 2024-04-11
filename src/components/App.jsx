@@ -1,40 +1,44 @@
+import { useState } from "react";
 import Logo from "./Logo";
 import Form from "./Form";
 import FilterAndActions from "./FilterAndActions";
 import BlogPosts from "./BlogPosts";
-
-const posts = [
-  {
-    id: 1,
-    title: "Introduction to React",
-    content:
-      "React is a JavaScript library for building user interfaces. It was developed by Facebook and released in 2013. React allows developers to create reusable UI components and efficiently manage the state of their applications. It has become one of the most popular libraries for front-end development due to its simplicity, flexibility, and performance.",
-    author: "John Doe",
-  },
-  {
-    id: 2,
-    title: "Getting Started with JavaScript",
-    content:
-      "JavaScript is a versatile programming language commonly used for web development. It is essential for building interactive websites and web applications. JavaScript can be used to add dynamic behavior to HTML and CSS, handle user interactions, manipulate the DOM, make HTTP requests, and much more.",
-    author: "Jane Smith",
-  },
-  {
-    id: 3,
-    title: "Mastering CSS Flexbox",
-    content:
-      "CSS Flexbox is a layout model that allows you to design flexible and responsive web layouts with ease. It provides a more efficient way to distribute space and align items within a container, eliminating the need for complex CSS hacks and workarounds. With Flexbox, you can create complex layouts that adapt to different screen sizes and devices.",
-    author: "Adam Johnson",
-  },
-];
+import initialPosts from "./initialPosts";
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+  const [posts, setPosts] = useState(initialPosts);
+  const [sortBy, setSortBy] = useState("input");
+
+  const handleAddNewPost = (newPost) => setPosts([...posts, newPost]);
+
+  const handleDeletePost = (id) => {
+    setPosts(posts.filter((post) => post.id !== id));
+  };
+
+  const handleClearAllPosts = () => {
+    if (window.confirm("Are you sure you want to clear all blog posts?"))
+      setPosts([]);
+  };
+
   return (
     <div className="app">
       <Logo />
       <div className="form-filter">
-        <Form />
-        <FilterAndActions />
-        <BlogPosts />
+        {showForm && (
+          <Form setShowForm={setShowForm} onAddNewPost={handleAddNewPost} />
+        )}
+        <FilterAndActions
+          setShowForm={setShowForm}
+          onClearAll={handleClearAllPosts}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+        />
+        <BlogPosts
+          posts={posts}
+          onDeletePost={handleDeletePost}
+          sortBy={sortBy}
+        />
       </div>
     </div>
   );
