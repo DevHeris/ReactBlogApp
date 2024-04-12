@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Form from "./Form";
 import FilterAndActions from "./FilterAndActions";
 import BlogPosts from "./BlogPosts";
-import initialPosts from "./initialPosts";
+import defaultPosts from "./defaultPosts";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
-  const [posts, setPosts] = useState(initialPosts);
+  const [posts, setPosts] = useState(() => {
+    const savedPosts = localStorage.getItem("posts");
+    const initialPosts = JSON.parse(savedPosts);
+    return initialPosts || defaultPosts;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("posts", JSON.stringify(posts));
+  }, [posts]);
+
   const [sortBy, setSortBy] = useState("input");
 
   const handleAddNewPost = (newPost) => setPosts([...posts, newPost]);

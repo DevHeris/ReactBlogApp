@@ -24,6 +24,10 @@ I've implemented a sort feature that allows users to sort blog posts based on sp
 
 I've added a "Clear All" button, providing users with a convenient way to delete all blog posts at once. This streamlines content management and improves usability, especially for users looking to start fresh or clean up their content.
 
+### Local Storage
+
+I got a feedback on twitter on implementing local storage. I followed an article that made use of useEffect which I haven't actually learnt about.
+
 ## Implementation Details
 
 - **Clear All Button:** Implemented as a `ClearAllButton` component, triggering the deletion of all blog posts when clicked.
